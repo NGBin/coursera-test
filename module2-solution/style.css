@@ -1,0 +1,82 @@
+body{
+	background-color: #fffff0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+	box-sizing: border-box;	
+}
+
+
+h1{
+	text-align: center;
+	font-size: 175%;
+}
+
+.title{
+	font-size: 125%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 1px solid black;
+}
+
+#sec1, #sec2, #sec3 {
+	padding: 10px;
+}
+
+
+#sec1 .content, #sec2 .content, #sec3 .content
+{
+	position: relative;
+	background-color: #ffd700;
+	border: 1px solid black;
+	padding: 15px;
+}
+
+#sec1 .title{
+	background-color: #adff2f;
+	padding: 1px;
+}
+
+#sec2 .title{
+	background-color: #9acd32;
+	padding: 1px;
+}
+
+#sec3 .title{
+	background-color: #ffffe0;
+	padding: 1px;
+}
+
+/* for the desktop version*/
+
+@media (min-width: 992px) 
+{
+	#sec1, #sec2, #sec3{
+		width: 33.33%;
+		float: left;
+	}
+}
+
+/*for tablet view*/
+@media (min-width: 768px) and (max-width: 991px)
+{
+	#sec1, #sec2{
+		width: 49.99%;
+		float: left;
+	}
+	#sec3 {
+		width: 100%;
+		float: left;
+	}
+}
+
+/*for the mobile version*/
+@media (max-width: 767px)
+{
+	#sec1, #sec2, #sec3{
+		width: 100%;
+		float: left;
+	}
+}
