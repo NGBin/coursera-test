@@ -27,31 +27,6 @@
     window.oRequestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame;
 
-var colorList = {  Hightemperatureheat : '#FF0000', Lowtemperatureheat: '#ffffff'};
-
-
-colorize = function(colorList) {
-    var container = document.getElementById('container');
-  
-    for (var key in colorList) {
-        var boxContainer = document.createElement("DIV");
-        var box = document.createElement("DIV");
-        var label = document.createElement("SPAN");
-
-        label.innerHTML = key;
-        box.className = "box";
-        box.style.backgroundColor = colorList[key];
-
-        boxContainer.appendChild(box);
-        boxContainer.appendChild(label);
-
-        container.appendChild(boxContainer);
-
-   }
-}
-
-colorize(colorList);
-
 var c = 0;
 var i1, i2, j1, j2;
 var k=0;
@@ -126,6 +101,31 @@ function doMouseDown(event) {
     k = 0;
     test();
 }
+
+var colorList = { ' High temperature heat' : '#FF0000', ' Low temperature heat': '#ffffff'};
+
+
+colorize = function(colorList) {
+    var container = document.getElementById('container');
+  
+    for (var key in colorList) {
+        var boxContainer = document.createElement("DIV");
+        var box = document.createElement("DIV");
+        var label = document.createElement("SPAN");
+
+        label.innerHTML = key;
+        box.className = "box";
+        box.style.backgroundColor = colorList[key];
+
+        boxContainer.appendChild(box);
+        boxContainer.appendChild(label);
+
+        container.appendChild(boxContainer);
+
+   }
+}
+
+colorize(colorList);
 </script>
 </body>
 </html>
